@@ -13,7 +13,6 @@ const Sidebar = () => {
         flexDirection: { md: "column" },
       }}
     >
-      <h1>sidebar</h1>
       {categories.map((category) => {
         return (
           <button
@@ -24,8 +23,23 @@ const Sidebar = () => {
             }}
             key={category.name}
           >
-            <span> {category.icon} </span>
-            <span> {category.name} </span>
+            <span
+              style={{
+                color:
+                  category.name === activeCategoryName ? "#fff" : "#fc1503",
+                marginRight: "15px",
+              }}
+            >
+              {category.icon}
+            </span>
+            <span
+              style={{
+                opacity: category.name === activeCategoryName ? "1" : "0.8",
+              }}
+            >
+              {" "}
+              {category.name}{" "}
+            </span>
           </button>
         );
       })}
