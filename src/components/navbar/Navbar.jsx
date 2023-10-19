@@ -13,12 +13,12 @@ const Navbar = () => {
       sx={{
         position: "sticky",
         top: "0",
-        background: "#00",
+        background: "#000",
         justifyContent: "space-between",
       }}
     >
       <Link to="/" style={{ display: "flex", alignItems: "center" }}>
-        <img src={logo} alt="logo" height={50} />
+        <img src={logo} alt="logo" height={50} loading="lazy" />
       </Link>
       <SearchBar />
     </Stack>
