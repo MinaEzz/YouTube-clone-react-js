@@ -36,7 +36,7 @@ const VideoCard = ({ video }) => {
           target="_blank"
         >
           <Typography variant="subtitle1" fontWeight="bold" color="#fff">
-            {video?.snippet?.title.slice(0, 60) || demoVideoTitle.slice(0, 60)}
+            {video?.snippet?.title.slice(0, 50) || demoVideoTitle.slice(0, 50)}
           </Typography>
         </Link>
         {/* channel link */}
