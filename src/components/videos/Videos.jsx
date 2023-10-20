@@ -3,7 +3,7 @@ import { Stack, Box } from "@mui/material";
 import VideoCard from "../video card/VideoCard";
 import ChannelCard from "../channel card/ChannelCard";
 
-const Videos = ({ videos }) => {
+const Videos = ({ videos, justifyCenter }) => {
   return (
     <Stack
       direction="row"
@@ -11,6 +11,7 @@ const Videos = ({ videos }) => {
       justifyContent="start"
       alignItems="center"
       gap={2}
+      sx={{ justifyContent: justifyCenter }}
     >
       {videos.map((item, index) => {
         return (

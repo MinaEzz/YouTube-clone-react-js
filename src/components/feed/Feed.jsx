@@ -16,6 +16,7 @@ const Feed = () => {
 
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
+      {/* sidebar box */}
       <Box
         sx={{
           height: { sx: "auto", md: "92vh" },
@@ -35,7 +36,15 @@ const Feed = () => {
           Copyright &copy;2023 Mina Ezzat
         </Typography>
       </Box>
-      <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
+      {/* videos box */}
+      <Box
+        p={2}
+        sx={{
+          overflowY: "auto",
+          height: "90vh",
+          flex: 2,
+        }}
+      >
         <Typography
           variant="h4"
           fontWeight="bold"
@@ -53,8 +62,7 @@ const Feed = () => {
               color: "#fff",
             }}
           >
-            {" "}
-            {error}{" "}
+            {error}
           </h2>
         ) : (
           <Videos videos={videos} />
