@@ -19,10 +19,7 @@ const VideoCard = ({ video }) => {
         borderRadius: 0,
       }}
     >
-      <Link
-        to={video.id.videoId ? `/video/${video.id.videoId}` : demoVideoUrl}
-        target="_blank"
-      >
+      <Link to={video.id.videoId ? `/video/${video.id.videoId}` : demoVideoUrl}>
         <CardMedia
           image={video?.snippet?.thumbnails?.high?.url || demoThumbnailUrl}
           alt={video?.snippet?.title || demoVideoTitle}
@@ -33,7 +30,6 @@ const VideoCard = ({ video }) => {
         {/* title link */}
         <Link
           to={video.id.videoId ? `/video/${video.id.videoId}` : demoVideoUrl}
-          target="_blank"
         >
           <Typography variant="subtitle1" fontWeight="bold" color="#fff">
             {video?.snippet?.title.slice(0, 50) || demoVideoTitle.slice(0, 50)}
@@ -46,7 +42,6 @@ const VideoCard = ({ video }) => {
               ? `/channel/${video?.snippet?.channelId}`
               : demoChannelUrl
           }
-          target="_blank"
         >
           <Typography variant="subtitle2" fontWeight="bold" color="gray">
             {video?.snippet?.channelTitle || demoChannelTitle}
