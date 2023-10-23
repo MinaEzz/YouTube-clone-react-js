@@ -3,10 +3,11 @@ import { Stack, Box } from "@mui/material";
 import VideoCard from "../video card/VideoCard";
 import ChannelCard from "../channel card/ChannelCard";
 
-const Videos = ({ videos, justifyCenter }) => {
+const Videos = ({ videos, justifyCenter, direction }) => {
+  if (!videos?.length) return "loading...";
   return (
     <Stack
-      direction="row"
+      direction={direction || "row"}
       flexWrap="wrap"
       justifyContent="start"
       alignItems="center"
