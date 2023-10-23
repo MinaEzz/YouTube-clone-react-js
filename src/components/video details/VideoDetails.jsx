@@ -35,8 +35,6 @@ const VideoDetails = () => {
           <Box
             sx={{
               width: "100%",
-              position: "sticky",
-              top: "86px",
             }}
           >
             <ReactPlayer
@@ -77,7 +75,6 @@ const VideoDetails = () => {
           </Box>
         </Box>
         {/* the left box "actual video" */}
-
         <Box
           px={2}
           py={{ md: 1, xs: 5 }}
